@@ -1,6 +1,4 @@
 from django.db import models
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
 
 class Menu(models.Model):
     id=models.AutoField(primary_key=True)
