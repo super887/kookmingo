@@ -17,6 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^keyboard', 'kookmingo.views.keyboard'),
+    url(r'^keyboard', include('kookmingo.urls')),
     url(r'^admin/', admin.site.urls),
 ]
