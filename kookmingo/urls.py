@@ -18,6 +18,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.keyboard),
-    url(r'^$', views.answer),
+    url(r'^keyboard/', views.keyboard),
+    url(r'^message', views.answer),
 ]
