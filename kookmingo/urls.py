@@ -18,5 +18,4 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.kookmingo, name='kookmingo'),
 ]
