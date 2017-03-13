@@ -22,7 +22,7 @@ def answer(request):
 
     return JsonResponse({
         'message':{
-            'text':today_date + ' 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'
+            'text':today_date + ' 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name)
         },
         'keyboard':{
             'type':'buttons',
@@ -51,6 +51,14 @@ def crawl(request):
         )
         i=i+1
 
+def get_menu(cafeteria_name):
+    if cafeteria_name == '복지관(학식)':
+        i = 0;
+        mn ={}
+        for mn in 11:
+            mn[i] = Menu[i].menu
+            i=i+7
+        return "----------\n"+mn[0] +"\n" +"----------\n"+mn[1] +"\n"+"----------\n"+mn[2] +"\n"+"----------\n"+mn[3] +"\n"+"----------\n"+mn[4] +"\n"+"----------\n"+mn[5] +"\n"+"----------\n"+mn[6] +"\n"+"----------\n"+mn[7] +"\n"+"----------\n"+mn[8] +"\n"+"----------\n"+mn[9] +"\n"+"----------\n"+mn[10] +"\n"+"----------\n"+mn[11] +"\n"
 
 
 
