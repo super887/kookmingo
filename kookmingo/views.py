@@ -18,7 +18,7 @@ def answer(request):
     json_str = ((request.body).decode('utf-8'))
     received_json_data = json.loads(json_str)
     cafeteria_name = received_json_data['content']
-    today_date = datetime.date.today().strftime("%m월 %d일s")
+    today_date = datetime.date.today().strftime("%m월 %d일")
 
     return JsonResponse({
         'message':{
@@ -30,5 +30,27 @@ def answer(request):
         }
     })
 
+def crawl(request):
+    menu_db = Menu.objects.all()
+    menu_db.delete()
 
-# Create your views here.
+    html= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=2')
+    source = html.read()
+    html.close()
+
+    soup = BeautifulSoup(source,"lxml")
+
+    table = soup.find_all("td", class_="ft_mn")
+    i = 0;
+    for tt in table:
+        tt[i]= table[i].get_text()
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[i]
+        )
+        i=i+1
+
+
+
+
