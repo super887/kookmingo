@@ -25,7 +25,7 @@ def answer(request):
 
     return JsonResponse({
         'message':{
-            'text':today_date + '('+ week_of_day + ')요일 ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day)
+            'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day)
         },
         'keyboard':{
             'type':'buttons',
