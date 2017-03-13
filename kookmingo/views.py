@@ -50,7 +50,7 @@ def crawl(request):
         newstr = str.replace("\n",'')
         int = newstr.find('￦')
         front = newstr[0:int]
-        back = newstr[int:-1]
+        back = newstr[int:-0]
         tt[i] = front + '\n' +back
         Menu.objects.create(
             cafe_name = 'dd',
