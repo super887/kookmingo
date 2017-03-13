@@ -53,7 +53,7 @@ def crawl(request):
         )
         i=i+1
 
-def get_menu(cafeteria_name,today_date):
+def get_menu(cafeteria_name):
     if cafeteria_name == '복지관(학식)':
         menu = Menu.objects.all()
         a1 = menu[0].menu
