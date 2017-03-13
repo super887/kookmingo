@@ -47,10 +47,10 @@ def crawl(request):
     source2 = html2.read()
     html2.close()
 
-    soup = BeautifulSoup(source2,"lxml")
+    soup2 = BeautifulSoup(source2,"lxml")
 
     table = soup.find_all("td", class_="ft_mn")
-    table2 = soup.find_all("td", class_="ft_mn")
+    table2 = soup2.find_all("td", class_="ft_mn")
     i = 0
     j = 0
     for tt in table:
