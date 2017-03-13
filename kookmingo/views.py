@@ -53,11 +53,6 @@ def crawl(request):
 
 def get_menu(cafeteria_name):
     if cafeteria_name == '복지관(학식)':
-        i = 0;
-        mn ={}
-        for mn in 11:
-            mn[i] = Menu[i].menu
-            i=i+7
-        return mn[0] + mn[7]
+        return Menu[0].menu + Menu[7].menu
 
 
