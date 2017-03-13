@@ -100,10 +100,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            a1 = '키친1--------------------------------\n'+menu[0].menu + '\n\n\n'
-            a2 = '키친2-------------------------------\n'+menu[7].menu + '\n\n\n'
-            a3 = '셀러드바---------------------------\n'+menu[14].menu + '\n\n\n'
-            a4 = '석식------------------\n'+menu[21].menu
-            return a1 + a2 + a3 + a4
+            b1 = '키친1--------------------------------\n'+menu[0].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[7].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[14].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[21].menu
+            return b1 + b2 + b3 + b4
 
 
