@@ -54,6 +54,6 @@ def crawl(request):
 def get_menu(cafeteria_name):
     if cafeteria_name == '복지관(학식)':
         menu = Menu.objects.all()
-        return menu[0].menu + menu[7].menu
+        return "asd"
 
 
