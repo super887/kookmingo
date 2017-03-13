@@ -18,11 +18,13 @@ def answer(request):
     json_str = ((request.body).decode('utf-8'))
     received_json_data = json.loads(json_str)
     cafeteria_name = received_json_data['content']
-    today_date = datetime.date.today().strftime("%m월 %d일 %w요일")
+    today_date = datetime.date.today().strftime("%m월 %d일")
+    week= ['월','화','수','목','금','토','일']
+    week_day = datetime.datetime.today().weekday()
 
     return JsonResponse({
         'message':{
-            'text':today_date + ' 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name)
+            'text':today_date + week_day + '요일 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name)
         },
         'keyboard':{
             'type':'buttons',
