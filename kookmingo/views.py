@@ -43,8 +43,16 @@ def crawl(request):
 
     soup = BeautifulSoup(source,"lxml")
 
+    html2= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=3')
+    source2 = html.read()
+    html2.close()
+
+    soup = BeautifulSoup(source2,"lxml")
+
     table = soup.find_all("td", class_="ft_mn")
-    i = 0;
+    table2 = soup.find_all("td", class_="ft_mn")
+    i = 0
+    j = 0
     for tt in table:
         str = table[i].get_text()
         newstr = str.replace("\n",'')
@@ -58,6 +66,20 @@ def crawl(request):
             menu = tt[i]
         )
         i=i+1
+
+    for tt in table2:
+        str = table2[j].get_text()
+        newstr = str.replace("\n",'')
+        int = newstr.find('￦')
+        front = newstr[0:int]
+        back = newstr[int:-1]
+        tt[j] = front + '\n' +back +'0'
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[j]
+        )
+        j=j+1
 
 def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
@@ -75,5 +97,13 @@ def get_menu(cafeteria_name,week_of_day):
             a10 = '차이웨이 상시---------------------------\n'+menu[63].menu + '\n\n\n'
             a11 = '차이웨이 특화---------------------------\n'+menu[70].menu
             return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11
+
+        elif cafeteria_name == '복지관(교직원)':
+            menu = Menu.objects.all()
+            a1 = '키친1--------------------------------\n'+menu[0].menu + '\n\n\n'
+            a2 = '키친2-------------------------------\n'+menu[7].menu + '\n\n\n'
+            a3 = '셀러드바---------------------------\n'+menu[14].menu + '\n\n\n'
+            a4 = '석식------------------\n'+menu[21].menu
+            return a1 + a2 + a3 + a4
 
 
