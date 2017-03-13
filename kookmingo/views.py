@@ -52,12 +52,14 @@ def crawl(request):
         i=i+1
 
 def get_menu(cafeteria_name):
-    if cafeteria_name == '복지관(학식)':
-        i = 0;
-        mn ={}
-        for mn in 11:
-            mn[i] = Menu[i].menu
-            i=i+7
-        return "asd"
+    abbbbc = cafeteria_name
+    # if cafeteria_name == '복지관(학식)':
+    #     i = 0;
+    #     mn ={}
+    #     for mn in 11:
+    #         mn[i] = Menu[i].menu
+    #         i=i+7
+
+    return abbbbc
 
 
