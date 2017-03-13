@@ -69,7 +69,6 @@ def get_menu(cafeteria_name,week_of_day):
             a9 = menu[56].menu
             a10 = menu[63].menu
             a11 = menu[70].menu
-            a12 = menu[77].menu
-            return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11+a12
+            return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11
 
 
