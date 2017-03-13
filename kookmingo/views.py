@@ -21,10 +21,11 @@ def answer(request):
     today_date = datetime.date.today().strftime("%m월 %d일")
     week= ['월','화','수','목','금','토','일']
     week_day = datetime.datetime.today().weekday()
+    week_of_day = week[week_day]
 
     return JsonResponse({
         'message':{
-            'text':today_date + week[week_day] + '요일 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name)
+            'text':today_date +  week_of_day + '요일 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name,week_of_day)
         },
         'keyboard':{
             'type':'buttons',
@@ -53,10 +54,22 @@ def crawl(request):
         )
         i=i+1
 
-def get_menu(cafeteria_name):
-    if cafeteria_name == '복지관(학식)':
-        menu = Menu.objects.all()
-        a1 = menu[0].menu
-        return a1
+def get_menu(cafeteria_name,week_of_day):
+    if week_of_day == '월':
+        if cafeteria_name == '복지관(학식)':
+            menu = Menu.objects.all()
+            a1 = menu[0].menu
+            a2 = menu[7].menu
+            a3 = menu[14].menu
+            a4 = menu[21].menu
+            a5 = menu[28].menu
+            a6 = menu[35].menu
+            a7 = menu[42].menu
+            a8 = menu[49].menu
+            a9 = menu[56].menu
+            a10 = menu[63].menu
+            a11 = menu[70].menu
+            a12 = menu[77].menu
+            return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11+a12
 
 
