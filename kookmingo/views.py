@@ -44,7 +44,7 @@ def crawl(request):
     soup = BeautifulSoup(source,"lxml")
 
     html2= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=3')
-    source2 = html.read()
+    source2 = html2.read()
     html2.close()
 
     soup = BeautifulSoup(source2,"lxml")
