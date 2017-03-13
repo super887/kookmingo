@@ -25,7 +25,7 @@ def answer(request):
 
     return JsonResponse({
         'message':{
-            'text':today_date +  week_of_day + '요일 의 ' + cafeteria_name +'중식 메뉴입니다.\n \n'+get_menu(cafeteria_name,week_of_day)
+            'text':today_date +  week_of_day + '요일 의 ' + cafeteria_name +' 메뉴입니다.\n'+get_menu(cafeteria_name,week_of_day)
         },
         'keyboard':{
             'type':'buttons',
@@ -46,7 +46,9 @@ def crawl(request):
     table = soup.find_all("td", class_="ft_mn")
     i = 0;
     for tt in table:
-        tt[i]= table[i].get_text()
+        str = table[i].get_text()
+        newstr = str.replace("\n","")
+        tt[i] = newstr
         Menu.objects.create(
             cafe_name = 'dd',
             time = 'dd',
