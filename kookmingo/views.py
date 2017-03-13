@@ -18,7 +18,7 @@ def answer(request):
     json_str = ((request.body).decode('utf-8'))
     received_json_data = json.loads(json_str)
     cafeteria_name = received_json_data['content']
-    today_date = datetime.date.today().strftime("%m월 %d일")
+    today_date = datetime.date.today().strftime("%m월 %d일 %w요일")
 
     return JsonResponse({
         'message':{
@@ -51,7 +51,7 @@ def crawl(request):
         )
         i=i+1
 
-def get_menu(cafeteria_name):
+def get_menu(cafeteria_name,today_date):
     if cafeteria_name == '복지관(학식)':
         menu = Menu.objects.all()
         a1 = menu[0].menu
