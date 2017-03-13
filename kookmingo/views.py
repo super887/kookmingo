@@ -61,17 +61,17 @@ def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
-            a1 = menu[0].menu + '\n\n'
-            a2 = menu[7].menu + '\n\n'
-            a3 = menu[14].menu + '\n\n'
-            a4 = menu[21].menu + '\n\n'
-            a5 = menu[28].menu + '\n\n'
-            a6 = menu[35].menu + '\n\n'
-            a7 = menu[42].menu + '\n\n'
-            a8 = menu[49].menu + '\n\n'
-            a9 = menu[56].menu + '\n\n'
-            a10 = menu[63].menu + '\n\n'
-            a11 = menu[70].menu
+            a1 = '------------\n' + '착한아침\n'+menu[0].menu + '\n\n\n'
+            a2 = '------------\n'+menu[7].menu + '\n\n\n'
+            a3 = '------------\n'+menu[14].menu + '\n\n\n'
+            a4 = '------------\n'+menu[21].menu + '\n\n\n'
+            a5 = '------------\n'+menu[28].menu + '\n\n\n'
+            a6 = '------------\n'+menu[35].menu + '\n\n\n'
+            a7 = '------------\n'+menu[42].menu + '\n\n\n'
+            a8 = '------------\n'+menu[49].menu + '\n\n\n'
+            a9 = '------------\n'+menu[56].menu + '\n\n\n'
+            a10 = '------------\n'+menu[63].menu + '\n\n\n'
+            a11 = '------------\n'+menu[70].menu
             return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11
 
 
