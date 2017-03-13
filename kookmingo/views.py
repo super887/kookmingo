@@ -47,7 +47,7 @@ def crawl(request):
     i = 0;
     for tt in table:
         str = table[i].get_text()
-        newstr = str.replace("\n","")
+        newstr = str.replace("\n",'')
         tt[i] = newstr
         Menu.objects.create(
             cafe_name = 'dd',
