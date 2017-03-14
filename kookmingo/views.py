@@ -88,17 +88,18 @@ def crawl(request):
 
     for tt in table3:
         str = table3[k].get_text()
-        newstr = str.replace("\n",'')
         int = newstr.find('￦')
         front = newstr[0:int]
         back = newstr[int:-1]
-        tt[k] = front + '\n' +back +'0'+'\n'
+        tt[k] = front + '\n' +back +'0'
         Menu.objects.create(
             cafe_name = 'dd',
             time = 'dd',
             menu = tt[k]
         )
         k=k+1
+
+
 
 def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
@@ -151,6 +152,12 @@ def get_menu(cafeteria_name,week_of_day):
         elif cafeteria_name == '법식(한울)':
             menu = Menu.objects.all()
             c1 = '바로바로---------------------------\n'+menu[106].menu
+            c1 = '바로바로2---------------------------\n'+menu[113].menu
+            c1 = '면이랑---------------------------\n'+menu[120].menu
+            c1 = '밥이랑하나-------------------------\n'+menu[127].menu
+            c1 = '밥이랑두울-------------------------\n'+menu[134].menu
+            c1 = '석쇠랑---------------------------\n'+menu[141].menu
+            c1 = '석쇠랑(조식)-----------------------\n'+menu[148].menu
             return c1
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
