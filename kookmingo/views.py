@@ -184,6 +184,13 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[154].menu+ '\n\n\n'
             return d1
 
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[161].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[168].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[175].menu+ '\n\n\n'
+            return e1+e2+e3
+
     elif week_of_day == '화':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -224,6 +231,13 @@ def get_menu(cafeteria_name,week_of_day):
             menu = Menu.objects.all()
             d1 = '중식---------------------------\n'+menu[155].menu+ '\n\n\n'
             return d1
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[162].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[169].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[176].menu+ '\n\n\n'
+            return e1+e2+e3
 
 
     elif week_of_day == '수':
@@ -266,6 +280,13 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[156].menu+ '\n\n\n'
             return d1
 
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[163].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[170].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[177].menu+ '\n\n\n'
+            return e1+e2+e3
+
     elif week_of_day == '목':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -307,6 +328,13 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[157].menu+ '\n\n\n'
             return d1
 
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[164].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[171].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[178].menu+ '\n\n\n'
+            return e1+e2+e3
+
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -346,6 +374,13 @@ def get_menu(cafeteria_name,week_of_day):
             menu = Menu.objects.all()
             d1 = '중식---------------------------\n'+menu[158].menu+ '\n\n\n'
             return d1
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[165].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[172].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[179].menu+ '\n\n\n'
+            return e1+e2+e3
 
     elif week_of_day == '토':
         if cafeteria_name == '복지관(학식)':
@@ -388,6 +423,13 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[159].menu+ '\n\n\n'
             return d1
 
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[166].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[173].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[180].menu+ '\n\n\n'
+            return e1+e2+e3
+
     elif week_of_day == '일':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -427,3 +469,10 @@ def get_menu(cafeteria_name,week_of_day):
             menu = Menu.objects.all()
             d1 = '중식---------------------------\n'+menu[160].menu+ '\n\n\n'
             return d1
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            e1 = '조식---------------------------\n'+menu[167].menu+ '\n\n\n'
+            e2 = '중식---------------------------\n'+menu[174].menu+ '\n\n\n'
+            e3 = '석식---------------------------\n'+menu[181].menu+ '\n\n\n'
+            return e1+e2+e3
