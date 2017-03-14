@@ -125,6 +125,18 @@ def get_menu(cafeteria_name,week_of_day):
             b3 = '셀러드바---------------------------\n'+menu[91].menu + '\n\n\n'
             b4 = '석식------------------\n'+menu[98].menu
             return b1 + b2 + b3 + b4
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[105].menu+ '\n\n\n'
+            c2 = '바로바로2---------------------------\n'+menu[112].menu+ '\n\n\n'
+            c3 = '면이랑---------------------------\n'+menu[119].menu+ '\n\n\n'
+            c4 = '밥이랑하나-------------------------\n'+menu[126].menu+ '\n\n\n'
+            c5 = '밥이랑두울-------------------------\n'+menu[133].menu+ '\n\n\n'
+            c6 = '석쇠랑---------------------------\n'+menu[140].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[147].menu+ '\n\n\n'
+            return c1+c2+c3+c4+c5+c6+c7
+
     elif week_of_day == '화':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -182,6 +194,18 @@ def get_menu(cafeteria_name,week_of_day):
             b3 = '셀러드바---------------------------\n'+menu[93].menu + '\n\n\n'
             b4 = '석식------------------\n'+menu[100].menu
             return b1 + b2 + b3 + b4
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[107].menu+ '\n\n\n'
+            c2 = '바로바로2---------------------------\n'+menu[114].menu+ '\n\n\n'
+            c3 = '면이랑---------------------------\n'+menu[121].menu+ '\n\n\n'
+            c4 = '밥이랑하나-------------------------\n'+menu[128].menu+ '\n\n\n'
+            c5 = '밥이랑두울-------------------------\n'+menu[135].menu+ '\n\n\n'
+            c6 = '석쇠랑---------------------------\n'+menu[142].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[149].menu+ '\n\n\n'
+            return c1+c2+c3+c4+c5+c6+c7
+
     elif week_of_day == '목':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -205,6 +229,17 @@ def get_menu(cafeteria_name,week_of_day):
             b3 = '셀러드바---------------------------\n'+menu[94].menu + '\n\n\n'
             b4 = '석식------------------\n'+menu[101].menu
             return b1 + b2 + b3 + b4
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[108].menu+ '\n\n\n'
+            c2 = '바로바로2---------------------------\n'+menu[115].menu+ '\n\n\n'
+            c3 = '면이랑---------------------------\n'+menu[122].menu+ '\n\n\n'
+            c4 = '밥이랑하나-------------------------\n'+menu[129].menu+ '\n\n\n'
+            c5 = '밥이랑두울-------------------------\n'+menu[136].menu+ '\n\n\n'
+            c6 = '석쇠랑---------------------------\n'+menu[143].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[150].menu+ '\n\n\n'
+            return c1+c2+c3+c4+c5+c6+c7
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -252,6 +287,17 @@ def get_menu(cafeteria_name,week_of_day):
             b4 = '석식------------------\n'+menu[103].menu
             return b1 + b2 + b3 + b4
 
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[109].menu+ '\n\n\n'
+            c2 = '바로바로2---------------------------\n'+menu[116].menu+ '\n\n\n'
+            c3 = '면이랑---------------------------\n'+menu[123].menu+ '\n\n\n'
+            c4 = '밥이랑하나-------------------------\n'+menu[130].menu+ '\n\n\n'
+            c5 = '밥이랑두울-------------------------\n'+menu[137].menu+ '\n\n\n'
+            c6 = '석쇠랑---------------------------\n'+menu[144].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[151].menu+ '\n\n\n'
+            return c1+c2+c3+c4+c5+c6+c7
+
     elif week_of_day == '일':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -275,3 +321,14 @@ def get_menu(cafeteria_name,week_of_day):
             b3 = '셀러드바---------------------------\n'+menu[97].menu + '\n\n\n'
             b4 = '석식------------------\n'+menu[104].menu
             return b1 + b2 + b3 + b4
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[110].menu+ '\n\n\n'
+            c2 = '바로바로2---------------------------\n'+menu[117].menu+ '\n\n\n'
+            c3 = '면이랑---------------------------\n'+menu[124].menu+ '\n\n\n'
+            c4 = '밥이랑하나-------------------------\n'+menu[131].menu+ '\n\n\n'
+            c5 = '밥이랑두울-------------------------\n'+menu[138].menu+ '\n\n\n'
+            c6 = '석쇠랑---------------------------\n'+menu[145].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[152].menu+ '\n\n\n'
+            return c1+c2+c3+c4+c5+c6+c7
