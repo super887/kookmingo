@@ -184,7 +184,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[154].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[161].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[168].menu+ '\n\n\n'
@@ -232,7 +232,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[155].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[162].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[169].menu+ '\n\n\n'
@@ -280,7 +280,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[156].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[163].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[170].menu+ '\n\n\n'
@@ -328,7 +328,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[157].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[164].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[171].menu+ '\n\n\n'
@@ -375,7 +375,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[158].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[165].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[172].menu+ '\n\n\n'
@@ -423,7 +423,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[159].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[166].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[173].menu+ '\n\n\n'
@@ -470,7 +470,7 @@ def get_menu(cafeteria_name,week_of_day):
             d1 = '중식---------------------------\n'+menu[160].menu+ '\n\n\n'
             return d1
 
-        elif cafeteria_name == '법식(한울)':
+        elif cafeteria_name == '생활관(정기)':
             menu = Menu.objects.all()
             e1 = '조식---------------------------\n'+menu[167].menu+ '\n\n\n'
             e2 = '중식---------------------------\n'+menu[174].menu+ '\n\n\n'
