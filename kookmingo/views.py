@@ -100,10 +100,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[78].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[85].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[92].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[99].menu
+            b1 = '키친1--------------------------------\n'+menu[77].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[84].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[91].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[98].menu
             return b1 + b2 + b3 + b4
     elif week_of_day == '화':
         if cafeteria_name == '복지관(학식)':
@@ -123,10 +123,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[79].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[86].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[93].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[100].menu
+            b1 = '키친1--------------------------------\n'+menu[78].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[85].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[92].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[99].menu
             return b1 + b2 + b3 + b4
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
@@ -146,10 +146,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[80].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[87].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[94].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[102].menu
+            b1 = '키친1--------------------------------\n'+menu[79].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[86].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[93].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[100].menu
             return b1 + b2 + b3 + b4
     elif week_of_day == '목':
         if cafeteria_name == '복지관(학식)':
@@ -169,10 +169,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[81].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[88].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[95].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[102].menu
+            b1 = '키친1--------------------------------\n'+menu[80].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[87].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[94].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[101].menu
             return b1 + b2 + b3 + b4
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
@@ -192,10 +192,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[82].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[89].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[96].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[103].menu
+            b1 = '키친1--------------------------------\n'+menu[81].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[88].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[95].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[102].menu
             return b1 + b2 + b3 + b4
     elif week_of_day == '토':
         if cafeteria_name == '복지관(학식)':
@@ -215,10 +215,10 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[83].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[90].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[97].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[104].menu
+            b1 = '키친1--------------------------------\n'+menu[82].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[89].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[96].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[103].menu
             return b1 + b2 + b3 + b4
 
     elif week_of_day == '일':
@@ -239,8 +239,8 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
-            b1 = '키친1--------------------------------\n'+menu[84].menu + '\n\n\n'
-            b2 = '키친2-------------------------------\n'+menu[91].menu + '\n\n\n'
-            b3 = '셀러드바---------------------------\n'+menu[98].menu + '\n\n\n'
-            b4 = '석식------------------\n'+menu[105].menu
+            b1 = '키친1--------------------------------\n'+menu[83].menu + '\n\n\n'
+            b2 = '키친2-------------------------------\n'+menu[90].menu + '\n\n\n'
+            b3 = '셀러드바---------------------------\n'+menu[97].menu + '\n\n\n'
+            b4 = '석식------------------\n'+menu[104].menu
             return b1 + b2 + b3 + b4
