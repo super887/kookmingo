@@ -88,6 +88,7 @@ def crawl(request):
 
     for tt in table3:
         str = table3[k].get_text()
+        newstr = str.replace("\n",'')
         int = newstr.find('￦')
         front = newstr[0:int]
         back = newstr[int:-1]
