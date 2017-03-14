@@ -92,11 +92,11 @@ def crawl(request):
         int = newstr.find('￦')
         front = newstr[0:int]
         back = newstr[int:-1]
-        tt[k] = front + '\n' +back +'0\n'
+        tt[k] = front + '\n' +back +'0'
         Menu.objects.create(
             cafe_name = 'dd',
             time = 'dd',
-            menu = tt[k]
+            menu = tt[k]+'\n'
         )
         k=k+1
 
