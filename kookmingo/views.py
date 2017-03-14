@@ -150,7 +150,7 @@ def get_menu(cafeteria_name,week_of_day):
 
         elif cafeteria_name == '법식(한울)':
             menu = Menu.objects.all()
-            c1 = '바로바로---------------------------\n'+menu[106]
+            c1 = '바로바로---------------------------\n'+menu[106].menu
             return c1
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
