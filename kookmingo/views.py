@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Menu
 import json, datetime
@@ -10,7 +9,7 @@ def keyboard(request):
     return JsonResponse(
         {
         'type':'buttons',
-        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)']
+        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)']
     })
 
 @csrf_exempt
@@ -29,7 +28,7 @@ def answer(request):
         },
         'keyboard':{
             'type':'buttons',
-            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)']
+            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)']
         }
     })
 
@@ -52,12 +51,26 @@ def crawl(request):
     html3.close()
     soup3 = BeautifulSoup(source3,"lxml")
 
+    html4= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=5')
+    source4 = html4.read()
+    html4.close()
+    soup4 = BeautifulSoup(source4,"lxml")
+
+    html5= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=6')
+    source5 = html5.read()
+    html5.close()
+    soup5 = BeautifulSoup(source5,"lxml")
+
     table = soup.find_all("td", class_="ft_mn")
     table2 = soup2.find_all("td", class_="ft_mn")
     table3 = soup3.find_all("td", class_="ft_mn")
+    table4 = soup4.find_all("td", class_="ft_mn")
+    table5 = soup5.find_all("td", class_="ft_mn")
     i = 0
     j = 0
     k = 0
+    x = 0
+    y = 0
     for tt in table:
         str = table[i].get_text()
         newstr = str.replace("\n",'')
@@ -100,6 +113,34 @@ def crawl(request):
         )
         k=k+1
 
+    for tt in table4:
+        str = table4[x].get_text()
+        newstr = str.replace("\n",'')
+        int = newstr.find('￦')
+        front = newstr[0:int]
+        back = newstr[int:-1]
+        tt[x] = front + '\n' +back +'0'
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[x]
+        )
+        x=x+1
+
+    for tt in table5:
+        str = table5[y].get_text()
+        newstr = str.replace("\n",'')
+        int = newstr.find('￦')
+        front = newstr[0:int]
+        back = newstr[int:-1]
+        tt[y] = front + '\n' +back +'0'
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[y]
+        )
+        y=y+1
+
 
 
 def get_menu(cafeteria_name,week_of_day):
@@ -138,6 +179,11 @@ def get_menu(cafeteria_name,week_of_day):
             c7 = '석쇠랑(조식)-----------------------\n'+menu[147].menu
             return c1+c2+c3+c4+c5+c6+c7
 
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[154].menu+ '\n\n\n'
+            return d1
+
     elif week_of_day == '화':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -172,6 +218,14 @@ def get_menu(cafeteria_name,week_of_day):
             c6 = '석쇠랑---------------------------\n'+menu[141].menu+ '\n\n\n'
             c7 = '석쇠랑(조식)-----------------------\n'+menu[148].menu
             return c1+c2+c3+c4+c5+c6+c7
+
+
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[155].menu+ '\n\n\n'
+            return d1
+
+
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -207,6 +261,11 @@ def get_menu(cafeteria_name,week_of_day):
             c7 = '석쇠랑(조식)-----------------------\n'+menu[149].menu
             return c1+c2+c3+c4+c5+c6+c7
 
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[156].menu+ '\n\n\n'
+            return d1
+
     elif week_of_day == '목':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -241,6 +300,13 @@ def get_menu(cafeteria_name,week_of_day):
             c6 = '석쇠랑---------------------------\n'+menu[143].menu+ '\n\n\n'
             c7 = '석쇠랑(조식)-----------------------\n'+menu[150].menu
             return c1+c2+c3+c4+c5+c6+c7
+
+
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[157].menu+ '\n\n\n'
+            return d1
+
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -274,6 +340,12 @@ def get_menu(cafeteria_name,week_of_day):
             c5 = '밥이랑두울-------------------------\n'+menu[137].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[144].menu+ '\n\n\n'
             c7 = '석쇠랑(조식)-----------------------\n'+menu[151].menu
+
+
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[158].menu+ '\n\n\n'
+            return d1
 
     elif week_of_day == '토':
         if cafeteria_name == '복지관(학식)':
@@ -310,6 +382,12 @@ def get_menu(cafeteria_name,week_of_day):
             c7 = '석쇠랑(조식)-----------------------\n'+menu[152].menu
             return c1+c2+c3+c4+c5+c6+c7
 
+
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[159].menu+ '\n\n\n'
+            return d1
+
     elif week_of_day == '일':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -344,3 +422,8 @@ def get_menu(cafeteria_name,week_of_day):
             c6 = '석쇠랑---------------------------\n'+menu[146].menu+ '\n\n\n'
             c7 = '석쇠랑(조식)-----------------------\n'+menu[153].menu
             return c1+c2+c3+c4+c5+c6+c7
+
+        elif cafeteria_name == '생활관(일반)':
+            menu = Menu.objects.all()
+            d1 = '중식---------------------------\n'+menu[160].menu+ '\n\n\n'
+            return d1
