@@ -135,7 +135,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[126].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[133].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[140].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[147].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[147].menu
             return c1+c2+c3+c4+c5+c6+c7
 
     elif week_of_day == '화':
@@ -170,7 +170,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[127].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[134].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[141].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[148].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[148].menu
             return c1+c2+c3+c4+c5+c6+c7
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
@@ -204,7 +204,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[128].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[135].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[142].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[149].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[149].menu
             return c1+c2+c3+c4+c5+c6+c7
 
     elif week_of_day == '목':
@@ -239,7 +239,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[129].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[136].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[143].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[150].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[150].menu
             return c1+c2+c3+c4+c5+c6+c7
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
@@ -273,7 +273,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[130].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[137].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[144].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[151].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[151].menu
 
     elif week_of_day == '토':
         if cafeteria_name == '복지관(학식)':
@@ -307,7 +307,7 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[131].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[138].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[145].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[152].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[152].menu
             return c1+c2+c3+c4+c5+c6+c7
 
     elif week_of_day == '일':
@@ -342,5 +342,5 @@ def get_menu(cafeteria_name,week_of_day):
             c4 = '밥이랑하나-------------------------\n'+menu[132].menu+ '\n\n\n'
             c5 = '밥이랑두울-------------------------\n'+menu[139].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[146].menu+ '\n\n\n'
-            c7 = '석쇠랑(조식)-----------------------\n'+menu[153].menu+ '\n\n\n'
+            c7 = '석쇠랑(조식)-----------------------\n'+menu[153].menu
             return c1+c2+c3+c4+c5+c6+c7
