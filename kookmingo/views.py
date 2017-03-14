@@ -10,7 +10,7 @@ def keyboard(request):
     return JsonResponse(
         {
         'type':'buttons',
-        'buttons':['복지관(학식)','복지관(교직원)']
+        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)']
     })
 
 @csrf_exempt
@@ -29,7 +29,7 @@ def answer(request):
         },
         'keyboard':{
             'type':'buttons',
-            'buttons': ['복지관(학식)', '복지관(교직원)']
+            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)']
         }
     })
 
@@ -40,19 +40,24 @@ def crawl(request):
     html= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=2')
     source = html.read()
     html.close()
-
     soup = BeautifulSoup(source,"lxml")
 
     html2= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=3')
     source2 = html2.read()
     html2.close()
-
     soup2 = BeautifulSoup(source2,"lxml")
+
+    html3= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=1')
+    source3 = html3.read()
+    html3.close()
+    soup3 = BeautifulSoup(source3,"lxml")
 
     table = soup.find_all("td", class_="ft_mn")
     table2 = soup2.find_all("td", class_="ft_mn")
+    table3 = soup3.find_all("td", class_="ft_mn")
     i = 0
     j = 0
+    k = 0
     for tt in table:
         str = table[i].get_text()
         newstr = str.replace("\n",'')
@@ -80,6 +85,20 @@ def crawl(request):
             menu = tt[j]
         )
         j=j+1
+
+    for tt in table3:
+        str = table3[k].get_text()
+        newstr = str.replace("\n",'')
+        int = newstr.find('￦')
+        front = newstr[0:int]
+        back = newstr[int:-1]
+        tt[k] = front + '\n' +back +'0'
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[k]
+        )
+        k=k+1
 
 def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
@@ -128,6 +147,10 @@ def get_menu(cafeteria_name,week_of_day):
             b3 = '셀러드바---------------------------\n'+menu[92].menu + '\n\n\n'
             b4 = '석식------------------\n'+menu[99].menu
             return b1 + b2 + b3 + b4
+
+        elif cafeteria_name == '법식(한울)':
+            menu = Menu.objects.all()
+            c1 = '바로바로---------------------------\n'+menu[106]
     elif week_of_day == '수':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
