@@ -9,7 +9,7 @@ def keyboard(request):
     return JsonResponse(
         {
         'type':'buttons',
-        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)']
+        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
     })
 
 @csrf_exempt
@@ -28,7 +28,7 @@ def answer(request):
         },
         'keyboard':{
             'type':'buttons',
-            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)']
+            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
         }
     })
 
@@ -61,16 +61,23 @@ def crawl(request):
     html5.close()
     soup5 = BeautifulSoup(source5,"lxml")
 
+    html6= urlopen('http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=4')
+    source6 = html6.read()
+    html6.close()
+    soup6 = BeautifulSoup(source6,"lxml")
+
     table = soup.find_all("td", class_="ft_mn")
     table2 = soup2.find_all("td", class_="ft_mn")
     table3 = soup3.find_all("td", class_="ft_mn")
     table4 = soup4.find_all("td", class_="ft_mn")
     table5 = soup5.find_all("td", class_="ft_mn")
+    table6 = soup6.find_all("td", class_="ft_mn")
     i = 0
     j = 0
     k = 0
     x = 0
     y = 0
+    z = 0
     for tt in table:
         str = table[i].get_text()
         newstr = str.replace("\n",'')
@@ -141,6 +148,20 @@ def crawl(request):
         )
         y=y+1
 
+    for tt in table6:
+        str = table6[z].get_text()
+        newstr = str.replace("\n",'')
+        int = newstr.find('￦')
+        front = newstr[0:int]
+        back = newstr[int:-1]
+        tt[z] = front + '\n' +back +'0'
+        Menu.objects.create(
+            cafe_name = 'dd',
+            time = 'dd',
+            menu = tt[z]
+        )
+        z=z+1
+
 
 
 def get_menu(cafeteria_name,week_of_day):
@@ -191,6 +212,17 @@ def get_menu(cafeteria_name,week_of_day):
             e3 = '석식---------------------------\n'+menu[175].menu+ '\n\n\n'
             return e1+e2+e3
 
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[182].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[189].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[196].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[203].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[210].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[217].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[224].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
+
     elif week_of_day == '화':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -238,6 +270,17 @@ def get_menu(cafeteria_name,week_of_day):
             e2 = '중식---------------------------\n'+menu[169].menu+ '\n\n\n'
             e3 = '석식---------------------------\n'+menu[176].menu+ '\n\n\n'
             return e1+e2+e3
+
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[183].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[190].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[197].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[204].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[211].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[218].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[225].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
 
 
     elif week_of_day == '수':
@@ -287,6 +330,17 @@ def get_menu(cafeteria_name,week_of_day):
             e3 = '석식---------------------------\n'+menu[177].menu+ '\n\n\n'
             return e1+e2+e3
 
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[184].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[191].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[198].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[205].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[212].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[219].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[226].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
+
     elif week_of_day == '목':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -335,6 +389,18 @@ def get_menu(cafeteria_name,week_of_day):
             e3 = '석식---------------------------\n'+menu[178].menu+ '\n\n\n'
             return e1+e2+e3
 
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[185].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[192].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[199].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[206].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[213].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[220].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[227].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
+
+
     elif week_of_day == '금':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -381,6 +447,17 @@ def get_menu(cafeteria_name,week_of_day):
             e2 = '중식---------------------------\n'+menu[172].menu+ '\n\n\n'
             e3 = '석식---------------------------\n'+menu[179].menu+ '\n\n\n'
             return e1+e2+e3
+
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[186].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[193].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[200].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[207].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[214].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[221].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[228].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
 
     elif week_of_day == '토':
         if cafeteria_name == '복지관(학식)':
@@ -430,6 +507,17 @@ def get_menu(cafeteria_name,week_of_day):
             e3 = '석식---------------------------\n'+menu[180].menu+ '\n\n\n'
             return e1+e2+e3
 
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[187].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[194].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[201].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[208].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[215].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[222].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[229].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
+
     elif week_of_day == '일':
         if cafeteria_name == '복지관(학식)':
             menu = Menu.objects.all()
@@ -476,3 +564,14 @@ def get_menu(cafeteria_name,week_of_day):
             e2 = '중식---------------------------\n'+menu[174].menu+ '\n\n\n'
             e3 = '석식---------------------------\n'+menu[181].menu+ '\n\n\n'
             return e1+e2+e3
+
+        elif cafeteria_name == '청향':
+            menu = Menu.objects.all()
+            f1 = '메뉴1---------------------------\n'+menu[188].menu+ '\n\n\n'
+            f2 = '메뉴2---------------------------\n'+menu[195].menu+ '\n\n\n'
+            f3 = '메뉴3---------------------------\n'+menu[202].menu+ '\n\n\n'
+            f4 = '메뉴4---------------------------\n'+menu[209].menu+ '\n\n\n'
+            f5 = '메뉴5---------------------------\n'+menu[216].menu+ '\n\n\n'
+            f6 = '메뉴6---------------------------\n'+menu[223].menu+ '\n\n\n'
+            f7 = '메뉴7---------------------------\n'+menu[230].menu+ '\n\n\n'
+            return f1+f2+f3+f4+f5+f6+f7
