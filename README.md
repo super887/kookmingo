@@ -1,6 +1,6 @@
-# kookmingo
-    asdasd
-    asdasd
-    asdasd
-
-김수연
+# 국민GO 개발노트
+## 비전공자도 할 수 있는 python + django 개발
+### 목차
+1.
+2.
+3.
