@@ -1,7 +1,6 @@
-# kookmingo 
-akdasd 
-asd sdsaddddddasd
+# kookmingo
+    asdasd
+    asdasd
+    asdasd
 
-
-rlrl김수연
-김수연은 천재다  
+김수연
