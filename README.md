@@ -142,6 +142,7 @@ django프레임워크를 배울 수 있는 좋은 싸이트이다
 앞에서도 말했지만 아래 사이트와 참고서적을 보고 공부하면 쉽게 django를 설치부터 개발까지 할 수 있다.
 
 django프레임워크를 배울 수 있는 좋은 싸이트이다
+
 <https://tutorial.djangogirls.org/ko/>
 <http://tryhelloworld.co.kr/courses/%EC%9E%A5%EA%B3%A0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0>
 
