@@ -151,6 +151,21 @@ django프레임워크를 배울 수 있는 좋은 싸이트이다
 
 위의 두 사이트를 마스터하고 계속해서 읽기를 바란다.
 
+개발내용을 정리해보면 이렇다.
+
+1. 카카오톡 옐로아이디 아이디를 만든다.
+2. 자동응답 api를 내 서버에 붙인다.
+3. 자동응답 api의 요청에 맞추어 답할 정보를 프로그래밍한다.
+4. 여기서 답할 정보는 국민대 생활협동조합 사이트에서 긁어오는 식단정보이다.
+
+우리는 서버에서 총 3가지 기능을 구현하면 된다. 요청을 받는 기능, 요청을 답하는 기능, 식단을 긁어오는 기능
+
+아래 정보는 소스코드와 함께보면 되겠다.
+
+1. url을 정해준다.
+
+프로젝트 폴더에서 urls.py에서 서버주소에 요청이 들어왔을때의 요청을 아래 코드 url(r'', include('kookmingo.urls')), 이것이 받아주고 urlconf는
+kookmingo 앱으로 넘겨준다.
 ~~~
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -158,6 +173,48 @@ urlpatterns = [
 ]
 ~~~
 
+kookmingo앱에서 urls.py 파일을 보면 3개의 요청이 오는 것을 볼 수 있다. 키보드는 사용자가 키보드 버튼을 클릭하는 요청을 받아주고 메세지는 서버가 응답해줘야 하는 것에 매칭된다.
+crawl은 국민대생활협동조합 사이트에서 매주 식단을 긁어와주는 역활을 한다.
 
+~~~
+urlpatterns = [
+    url(r'^keyboard/', views.keyboard),
+    url(r'^message', views.answer),
+    url(r'^crawl/', views.crawl),
+]
+~~~
 
+2. view 코딩
+django에 어느정도 익숙해진 분이라면 쉽게 이해가 갈것이다. 이제 keyboard라는 url로 요청이 들어오면 뷰에서 keyboard를 실행시켜준다.
 
+~~~
+def keyboard(request):
+    return JsonResponse(
+        {
+        'type':'buttons',
+        'buttons':['복지관(학식)','복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
+    })
+~~~
+
+응답은 아래와 같다.
+
+~~~@csrf_exempt
+def answer(request):
+    json_str = ((request.body).decode('utf-8'))
+    received_json_data = json.loads(json_str)
+    cafeteria_name = received_json_data['content']
+    today_date = datetime.date.today().strftime("%m월 %d일")
+    week= ['월','화','수','목','금','토','일']
+    week_day = datetime.datetime.today().weekday()
+    week_of_day = week[week_day]
+
+    return JsonResponse({
+        'message':{
+            'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day)
+        },
+        'keyboard':{
+            'type':'buttons',
+            'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
+        }
+    })
+~~~
