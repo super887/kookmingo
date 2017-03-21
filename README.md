@@ -114,7 +114,9 @@ django란 framework이다!!
 장고는 파이썬언어로 웹사이트나 웹서버, 웹 어플레케이션, 앱등을 개발할때 도와주는 "웹 프레임워크"이다.
 
 django프레임워크를 배울 수 있는 좋은 싸이트이다
+
 <https://tutorial.djangogirls.org/ko/>
+
 <http://tryhelloworld.co.kr/courses/%EC%9E%A5%EA%B3%A0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0>
 
 ## 5. 서버와 클라이언트의 이해
@@ -144,6 +146,7 @@ django프레임워크를 배울 수 있는 좋은 싸이트이다
 django프레임워크를 배울 수 있는 좋은 싸이트이다
 
 <https://tutorial.djangogirls.org/ko/>
+
 <http://tryhelloworld.co.kr/courses/%EC%9E%A5%EA%B3%A0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0>
 
 
