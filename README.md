@@ -198,7 +198,8 @@ def keyboard(request):
 
 응답은 아래와 같다.
 
-~~~@csrf_exempt
+~~~
+@csrf_exempt
 def answer(request):
     json_str = ((request.body).decode('utf-8'))
     received_json_data = json.loads(json_str)
@@ -217,4 +218,19 @@ def answer(request):
             'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
         }
     })
+~~~
+
+여기서 return 값을 보면 다시한번 get_menu함수를 호출하는것이 보인다.  get_menu함수는 디비에 저장되어 있는 식단을 불러오는 역할을 하며 코드는 여기서 적지는 않겠다.
+
+3. crawl 크롤러 구현
+crawl 기능은 장고에서 사용할 수 있는 beautiful soup4를 이용해서 구현하였다. 크롤러 기능 구현은 구글에서 검색하면 많은 정보가 나오니 소스코드를 보면서 공부하면 되겠다.
+
+4. model(DB)
+크롤러에서 긁어와서 db에 저장해주는 모델을 아래와 같이 구현 하였다.
+~~~
+class Menu(models.Model):
+    id=models.AutoField(primary_key=True)
+    cafe_name = models.CharField(max_length=30)
+    time = models.CharField(max_length=30)
+    menu = models.TextField(max_length=2000)
 ~~~
