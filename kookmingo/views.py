@@ -434,6 +434,7 @@ def get_menu(cafeteria_name,week_of_day):
             c5 = '밥이랑두울-------------------------\n'+menu[137].menu+ '\n\n\n'
             c6 = '석쇠랑---------------------------\n'+menu[144].menu+ '\n\n\n'
             c7 = '석쇠랑(조식)-----------------------\n'+menu[151].menu
+            return c1+c2+c3+c4+c5+c6+c7
 
 
         elif cafeteria_name == '생활관(일반)':
