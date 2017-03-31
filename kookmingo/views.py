@@ -26,6 +26,7 @@ def answer(request):
         'message':{
             'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day),
             'photo':{"url":"https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg","width":640,"height":480},
+            "message_button": {"label": "반갑습니다.", "url": "http://naver.com"},
         },
         'keyboard':{
             'type':'buttons',
