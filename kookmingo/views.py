@@ -25,8 +25,8 @@ def answer(request):
     return JsonResponse({
         'message':{
             'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day),
-            # 'photo':{"url":"https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg","width":640,"height":480},
-            # "message_button": {"label": "반갑습니다.", "url": "http://naver.com"},
+            # 'photo':{"url":get_photo(),"width":640,"height":480},
+            "message_button": {"label": "국민대 주간식단 보러가기.", "url": "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=1"},
         },
         'keyboard':{
             'type':'buttons',
@@ -165,6 +165,7 @@ def crawl(request):
         z=z+1
 
 
+# def get_photo()
 
 def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
@@ -417,7 +418,7 @@ def get_menu(cafeteria_name,week_of_day):
             a9 = '석식 데일리밥----------------------------\n'+menu[60].menu + '\n\n\n'
             a10 = '차이웨이 상시---------------------------\n'+menu[67].menu + '\n\n\n'
             a11 = '차이웨이 특화---------------------------\n'+menu[74].menu
-            return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11 + '\'photo\':{"url":"https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg","width":640,"height":480},'
+            return a1 + a2 + a3 + a4 + a5+ a6+a7+a8+a9+a10+a11
 
         elif cafeteria_name == '복지관(교직원)':
             menu = Menu.objects.all()
