@@ -165,7 +165,7 @@ def crawl(request):
         z=z+1
 
 
-def get_photo():
+def get_photo(cafeteria_name):
     return "https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg"
 
 def get_menu(cafeteria_name,week_of_day):
