@@ -26,7 +26,7 @@ def answer(request):
         'message':{
             'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day),
             # 'photo':{"url":get_photo(cafeteria_name),"width":640,"height":480},
-            "message_button": {"label": "국민대 주간식단 보러가기.", "url": "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=1"},
+            "message_button": {"label": "국민대 주간식단 보러가기.", "url": get_url(cafeteria_name,week_of_day)},
         },
         'keyboard':{
             'type':'buttons',
@@ -167,6 +167,24 @@ def crawl(request):
 
 def get_photo(cafeteria_name):
     return "https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg"
+
+def get_url(name,url):
+    if name == '복지관(학식)':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=2"
+    elif name == '복지관(교직원)':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=3"
+
+    elif name == '법식(한울)':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=1"
+
+    elif name == '생활관(일반)':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=5"
+
+    elif name == '생활관(정기)':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=6"
+
+    elif name =='청향':
+        return "http://kmucoop.kookmin.ac.kr/restaurant/restaurant.php?w=4"
 
 def get_menu(cafeteria_name,week_of_day):
     if week_of_day == '월':
