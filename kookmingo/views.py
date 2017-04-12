@@ -165,8 +165,6 @@ def crawl(request):
         z=z+1
 
 
-def get_photo(cafeteria_name):
-    return "https://pbs.twimg.com/media/Cb985sdW4AABC-p.jpg"
 
 def get_url(name,url):
     if name == '복지관(학식)':
