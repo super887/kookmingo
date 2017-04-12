@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from .models import *
+from .models import Menu
 import json, datetime
 from django.views.decorators.csrf import csrf_exempt
 from bs4 import BeautifulSoup
@@ -25,7 +25,10 @@ def answer(request):
     return JsonResponse({
         'message':{
             'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day),
+            # 'photo':{"url":get_photo(cafeteria_name),"width":640,"height":480},
+            "message_button": {"label": "국민대 주간식단 보러가기.", "url": get_url(cafeteria_name, week_of_day)},
         },
+
         'keyboard':{
             'type':'buttons',
             'buttons': ['복지관(학식)', '복지관(교직원)','법식(한울)','생활관(일반)','생활관(정기)','청향']
