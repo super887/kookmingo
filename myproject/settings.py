@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kookmingo',
-    'kookmingohomepage.apps.KookmingohomepageConfig'
+    'kookmingohomepage',
 ]
 
 MIDDLEWARE = [
