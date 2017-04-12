@@ -1,0 +1,41 @@
+{% extends 'kookmingohomepage/layout.html' %}
+{% load staticfiles %}
+
+{% block background %}
+
+{% endblock %}
+
+{% block content %}
+
+    <h1>회원가입</h1>
+    <form method="post" action=".">
+    {% csrf_token %}
+
+    {% if form.errors %}
+        아래 에러
+    {% endif %}
+
+    <p>아래 정보를 기입해 주세요</p>
+    <fieldset>
+        <div>
+            {{ form.username.label_tag }} {{ form.username }}
+        </div>
+        <div>
+            {{ form.email.label_tag }} {{ form.email }}
+        </div>
+        <div>
+            {{ form.password1.label_tag }} {{ form.password1 }}
+        </div>
+        <div>
+            {{ form.password2.label_tag }} {{ form.password2 }}
+        </div>
+
+    </fieldset>
+    <div class="container" align="center">
+        <button class="btn btn-danger"type="submit">회원가입</button>
+    </div>
+    <script>
+        document.getElementsById('id_username').focus();
+    </script>
+    </form>
+{% endblock %}

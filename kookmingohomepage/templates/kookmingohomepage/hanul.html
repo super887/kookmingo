@@ -1,0 +1,25 @@
+{% extends "kookmingohomepage/layout.html" %}
+{% load staticfiles %}
+{% block style %}
+{% endblock %}
+
+{% block background %}
+{% endblock %}
+
+
+{% block content %}
+   <div class="row">
+    {% for post in object_list %}
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-4">
+                    <img src="{% static 'image/back1.jpeg' %}">
+                </div>
+                <div class="col-xs-8">
+                    {{ post.menu }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+   </div>
+{% endblock %}

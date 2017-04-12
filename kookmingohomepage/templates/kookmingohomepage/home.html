@@ -1,0 +1,16 @@
+{% extends "kookmingohomepage/layout.html" %}
+{% block backgroud %}
+{% endblock %}
+
+{% block content %}
+
+<div id="buttons">
+  <a href="{% url 'hanul' %}" class="btn-trans clean-a blue">한울</a>
+  <a href="{% url 'student' %}" class="btn-trans clean-a green">복지관(학식)</a>
+  <a href="{% url 'staff'%}" class="btn-trans clean-a red">복지관(교직원)</a>
+  <a href="{% url 'smell' %}" class="btn-trans clean-a purple">청향</a>
+  <a href="{% url 'dormitorynormal' %}" class="btn-trans clean-a orange">생활관(일반식)</a>
+  <a href="{% url 'dormitoryroutine' %}" class="btn-trans clean-a yellow">생활관(정기식)</a>
+</div>
+{% endblock %}
+

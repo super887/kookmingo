@@ -1,0 +1,30 @@
+{% extends 'kookmingohomepage/layout.html' %}
+{% block background %}
+
+{% endblock %}
+{% block content %}
+
+    <p>login</p>
+    <form action="." method="post">
+    {% csrf_token %}
+    {% if form.errors %}
+        <p>wrong please correct the errors below</p>
+    {% endif %}
+
+        <p>아이디와 비밀번호를 입력하세요</p>
+        <fieldset>
+            <div>
+                {{ form.username.label_tag }} {{ form.username }}
+            </div>
+            <div>
+                {{ form.password.label_tag }} {{ form.password }}
+            </div>
+        </fieldset>
+        <div>
+            <button class="btn btn-danger" type="submit" value="{{ next }}">login</button>
+        </div>
+    <script>
+        document.getElementById('id_username').focus();
+    </script>
+    </form>
+{% endblock %}
