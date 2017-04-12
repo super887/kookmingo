@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83eb4c36-0c4e-4acd-88a0-f14e6f679776" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myproject/settings.py" afterPath="$PROJECT_DIR$/myproject/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kookmingo/views.py" afterPath="$PROJECT_DIR$/kookmingo/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myproject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="603">
+              <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -45,8 +43,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kookmingo/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="345">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="e#643#684#0" expanded="true" />
               </folding>
@@ -54,20 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#1193#4766#0" expanded="false" />
-                <element signature="e#5535#6510#0" expanded="false" />
-                <element signature="e#6567#6926#0" expanded="false" />
-                <element signature="e#8788#12047#0" expanded="false" />
-                <element signature="e#12087#15346#0" expanded="false" />
-                <element signature="e#15385#18646#0" expanded="false" />
-                <element signature="e#21986#25247#0" expanded="false" />
+                <element signature="e#1089#4662#0" expanded="false" />
+                <element signature="e#5431#6406#0" expanded="false" />
+                <element signature="e#6463#6822#0" expanded="false" />
+                <element signature="e#8684#11943#0" expanded="false" />
+                <element signature="e#11983#15242#0" expanded="false" />
+                <element signature="e#15281#18542#0" expanded="false" />
+                <element signature="e#21882#25143#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -174,6 +172,7 @@
       <find>auth</find>
       <find>key</find>
       <find>ke</find>
+      <find>keyboard</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,8 +211,8 @@
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/registration/password_change_done.html" />
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/kookmingohomepage/layout.html" />
-        <option value="$PROJECT_DIR$/kookmingo/views.py" />
         <option value="$PROJECT_DIR$/myproject/settings.py" />
+        <option value="$PROJECT_DIR$/kookmingo/views.py" />
       </list>
     </option>
   </component>
@@ -626,13 +625,13 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1193#4766#0" expanded="false" />
-            <element signature="e#5535#6510#0" expanded="false" />
-            <element signature="e#6567#6926#0" expanded="false" />
-            <element signature="e#8788#12047#0" expanded="false" />
-            <element signature="e#12087#15346#0" expanded="false" />
-            <element signature="e#15385#18646#0" expanded="false" />
-            <element signature="e#21986#25247#0" expanded="false" />
+            <element signature="e#1089#4662#0" expanded="false" />
+            <element signature="e#5431#6406#0" expanded="false" />
+            <element signature="e#6463#6822#0" expanded="false" />
+            <element signature="e#8684#11943#0" expanded="false" />
+            <element signature="e#11983#15242#0" expanded="false" />
+            <element signature="e#15281#18542#0" expanded="false" />
+            <element signature="e#21882#25143#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -715,13 +714,13 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1193#4766#0" expanded="false" />
-            <element signature="e#5535#6510#0" expanded="false" />
-            <element signature="e#6567#6926#0" expanded="false" />
-            <element signature="e#8788#12047#0" expanded="false" />
-            <element signature="e#12087#15346#0" expanded="false" />
-            <element signature="e#15385#18646#0" expanded="false" />
-            <element signature="e#21986#25247#0" expanded="false" />
+            <element signature="e#1089#4662#0" expanded="false" />
+            <element signature="e#5431#6406#0" expanded="false" />
+            <element signature="e#6463#6822#0" expanded="false" />
+            <element signature="e#8684#11943#0" expanded="false" />
+            <element signature="e#11983#15242#0" expanded="false" />
+            <element signature="e#15281#18542#0" expanded="false" />
+            <element signature="e#21882#25143#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,33 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1193#4766#0" expanded="false" />
-            <element signature="e#5535#6510#0" expanded="false" />
-            <element signature="e#6567#6926#0" expanded="false" />
-            <element signature="e#8788#12047#0" expanded="false" />
-            <element signature="e#12087#15346#0" expanded="false" />
-            <element signature="e#15385#18646#0" expanded="false" />
-            <element signature="e#21986#25247#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kookmingo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="e#643#684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myproject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1053,9 +1025,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="603">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="126" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kookmingo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#643#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#1089#4662#0" expanded="false" />
+            <element signature="e#5431#6406#0" expanded="false" />
+            <element signature="e#6463#6822#0" expanded="false" />
+            <element signature="e#8684#11943#0" expanded="false" />
+            <element signature="e#11983#15242#0" expanded="false" />
+            <element signature="e#15281#18542#0" expanded="false" />
+            <element signature="e#21882#25143#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
