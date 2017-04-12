@@ -25,8 +25,6 @@ def answer(request):
     return JsonResponse({
         'message':{
             'text':today_date + '('+ week_of_day + '요일) ' + cafeteria_name +' 메뉴\n\n'+get_menu(cafeteria_name,week_of_day),
-            # 'photo':{"url":get_photo(cafeteria_name),"width":640,"height":480},
-            "message_button": {"label": " 주간식단 보러가기.", "url": get_url(cafeteria_name,week_of_day)},
         },
         'keyboard':{
             'type':'buttons',

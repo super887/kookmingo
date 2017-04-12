@@ -20,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myproject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="125" column="12" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+            <state relative-caret-position="333">
+              <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -54,20 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#1267#4840#0" expanded="false" />
-                <element signature="e#5609#6584#0" expanded="false" />
-                <element signature="e#6641#7000#0" expanded="false" />
-                <element signature="e#8862#12121#0" expanded="false" />
-                <element signature="e#12161#15420#0" expanded="false" />
-                <element signature="e#15459#18720#0" expanded="false" />
-                <element signature="e#22060#25321#0" expanded="false" />
+                <element signature="e#1085#4658#0" expanded="false" />
+                <element signature="e#5427#6402#0" expanded="false" />
+                <element signature="e#6459#6818#0" expanded="false" />
+                <element signature="e#8680#11939#0" expanded="false" />
+                <element signature="e#11979#15238#0" expanded="false" />
+                <element signature="e#15277#18538#0" expanded="false" />
+                <element signature="e#21878#25139#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,6 +172,7 @@
       <find>log</find>
       <find>login</find>
       <find>auth</find>
+      <find>key</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,8 +211,8 @@
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/registration/password_change_done.html" />
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/kookmingohomepage/templates/kookmingohomepage/layout.html" />
-        <option value="$PROJECT_DIR$/kookmingo/views.py" />
         <option value="$PROJECT_DIR$/myproject/settings.py" />
+        <option value="$PROJECT_DIR$/kookmingo/views.py" />
       </list>
     </option>
   </component>
@@ -632,13 +633,13 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1267#4840#0" expanded="false" />
-            <element signature="e#5609#6584#0" expanded="false" />
-            <element signature="e#6641#7000#0" expanded="false" />
-            <element signature="e#8862#12121#0" expanded="false" />
-            <element signature="e#12161#15420#0" expanded="false" />
-            <element signature="e#15459#18720#0" expanded="false" />
-            <element signature="e#22060#25321#0" expanded="false" />
+            <element signature="e#1085#4658#0" expanded="false" />
+            <element signature="e#5427#6402#0" expanded="false" />
+            <element signature="e#6459#6818#0" expanded="false" />
+            <element signature="e#8680#11939#0" expanded="false" />
+            <element signature="e#11979#15238#0" expanded="false" />
+            <element signature="e#15277#18538#0" expanded="false" />
+            <element signature="e#21878#25139#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -721,13 +722,13 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1267#4840#0" expanded="false" />
-            <element signature="e#5609#6584#0" expanded="false" />
-            <element signature="e#6641#7000#0" expanded="false" />
-            <element signature="e#8862#12121#0" expanded="false" />
-            <element signature="e#12161#15420#0" expanded="false" />
-            <element signature="e#15459#18720#0" expanded="false" />
-            <element signature="e#22060#25321#0" expanded="false" />
+            <element signature="e#1085#4658#0" expanded="false" />
+            <element signature="e#5427#6402#0" expanded="false" />
+            <element signature="e#6459#6818#0" expanded="false" />
+            <element signature="e#8680#11939#0" expanded="false" />
+            <element signature="e#11979#15238#0" expanded="false" />
+            <element signature="e#15277#18538#0" expanded="false" />
+            <element signature="e#21878#25139#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -984,23 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1267#4840#0" expanded="false" />
-            <element signature="e#5609#6584#0" expanded="false" />
-            <element signature="e#6641#7000#0" expanded="false" />
-            <element signature="e#8862#12121#0" expanded="false" />
-            <element signature="e#12161#15420#0" expanded="false" />
-            <element signature="e#15459#18720#0" expanded="false" />
-            <element signature="e#22060#25321#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kookmingo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1053,9 +1037,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="125" column="12" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+        <state relative-caret-position="333">
+          <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kookmingo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#1085#4658#0" expanded="false" />
+            <element signature="e#5427#6402#0" expanded="false" />
+            <element signature="e#6459#6818#0" expanded="false" />
+            <element signature="e#8680#11939#0" expanded="false" />
+            <element signature="e#11979#15238#0" expanded="false" />
+            <element signature="e#15277#18538#0" expanded="false" />
+            <element signature="e#21878#25139#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
